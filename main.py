@@ -16,7 +16,7 @@ def index():
 def checkPW():
     username = request.form['username']
     if len(username) < 3 or len(username) > 20 or username.isalnum() == False:
-        return render_template('Signup.html',username = 'letters and numbers only please and be more than three characters', e = email )
+        return render_template('Signup.html',username = 'letters and numbers only please and be more than three characters',)
 
     email = request.form['email']
     if len(email) < 3 or len(email) > 20:
